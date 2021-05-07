@@ -1,0 +1,14 @@
+const {Router} = require('express');
+const router = Router();
+const {renderSignUpForm, renderSignInForm, signup, signin, logout, inicio, perfil, renderEditUserForm,updateUser} = require('../controllers/users.controller');
+const {isAuthenticated} = require('../helpers/auth');
+router.get('/users/signup',renderSignUpForm);
+router.post('/users/signup',signup);
+router.get('/users/signin',renderSignInForm);
+router.post('/users/signin',signin);
+router.get('/users/logout',logout);
+router.get('/users/inicio',isAuthenticated,inicio);
+router.get('/users/perfil',isAuthenticated,perfil);
+router.get('/users/editUser/:id',isAuthenticated,renderEditUserForm);
+router.put('/users/editUser/:id',isAuthenticated,updateUser);
+module.exports = router;
