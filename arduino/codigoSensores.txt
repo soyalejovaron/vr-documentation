@@ -1,0 +1,16 @@
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  
+  int v_lluvia = analogRead(A0);
+  int v_humedad = analogRead(A2);
+
+  String lluvia = String(v_lluvia) + "," + String(v_humedad);
+  
+  Serial.println(lluvia);
+  
+  delay(6000);
+
+}

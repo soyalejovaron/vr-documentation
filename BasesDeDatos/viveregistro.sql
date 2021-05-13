@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2021 a las 06:18:53
+-- Tiempo de generación: 13-05-2021 a las 10:24:04
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -63,41 +63,19 @@ CREATE TABLE `registrohumedad` (
 --
 
 INSERT INTO `registrohumedad` (`idH`, `idSensorH`, `porcentajeH`, `estadoH`, `descripcionH`) VALUES
-(1, 1, '24', 'Activo', 'La planta está seca'),
-(3, 1, '40', 'Activo', 'El suela está seco'),
-(4, 1, '40', 'Activo', 'El suela está seco'),
-(5, 1, '40', 'Activo', 'El suela está seco'),
-(6, 1, '40', 'Activo', 'El suela está seco'),
-(7, 1, '40', 'Activo', 'El suela está seco'),
-(8, 1, '40', 'Activo', 'El suela está seco'),
-(9, 1, '40', 'Activo', 'El suela está seco'),
-(10, 1, '40', 'Activo', 'El suela está seco'),
-(11, 1, '40', 'Activo', 'El suela está seco'),
-(12, 1, '40', 'Activo', 'El suela está seco'),
-(13, 1, '40', 'Activo', 'El suela está seco'),
-(14, 1, '40', 'Activo', 'El suela está seco'),
-(15, 1, '40', 'Activo', 'El suela está seco'),
-(16, 1, '40', 'Activo', 'El suela está seco'),
-(17, 1, '40', 'Activo', 'El suela está seco'),
-(18, 1, '40', 'Activo', 'El suela está seco'),
-(19, 1, '40', 'Activo', 'El suela está seco'),
-(20, 1, '40', 'Activo', 'El suela está seco'),
-(21, 1, '40', 'Activo', 'El suela está seco'),
-(22, 1, '40', 'Activo', 'El suela está seco'),
-(23, 1, '40', 'Activo', 'El suela está seco'),
-(24, 1, '40', 'Activo', 'El suela está seco'),
-(25, 1, '40', 'Activo', 'El suela está seco'),
-(26, 1, '40', 'Activo', 'El suela está seco'),
-(27, 1, '40', 'Activo', 'El suela está seco'),
-(28, 1, '40', 'Activo', 'El suela está seco'),
-(29, 1, '40', 'Activo', 'El suela está seco'),
-(30, 1, '40', 'Activo', 'El suela está seco'),
-(31, 1, '40', 'Activo', 'El suela está seco'),
-(32, 1, '40', 'Activo', 'El suela está seco'),
-(33, 1, '40', 'Activo', 'El suela está seco'),
-(34, 1, '40', 'Activo', 'El suela está seco'),
-(35, 1, '76', 'Activo', 'El suelo está humedo'),
-(36, 1, '23', 'Activo', 'El suelo está humedo');
+(77, 1, '40', 'Activo', 'El suela está seco'),
+(78, 1, '40', 'Activo', 'El suela está seco'),
+(79, 1, '40', 'Activo', 'El suela está seco'),
+(80, 1, '40', 'Activo', 'El suela está seco'),
+(81, 1, '40', 'Activo', 'El suela está seco'),
+(82, 1, '40', 'Activo', 'El suela está seco'),
+(83, 1, '40', 'Activo', 'El suela está seco'),
+(84, 1, '40', 'Activo', 'El suela está seco'),
+(85, 1, '40', 'Activo', 'El suela está seco'),
+(86, 1, '40', 'Activo', 'El suela está seco'),
+(87, 1, '40', 'Activo', 'El suela está seco'),
+(88, 1, '40', 'Activo', 'El suela está seco'),
+(89, 1, '40', 'Activo', 'El suela está seco');
 
 -- --------------------------------------------------------
 
@@ -142,7 +120,11 @@ CREATE TABLE `sensorh` (
 --
 
 INSERT INTO `sensorh` (`idSensorH`, `id_planta`, `nombreSensorH`, `tipoSensorH`, `datosSensorH`, `colorSensorH`, `fechaCreacionH`) VALUES
-(1, 3, 'Sensor 1', 'Humedad', '', '#000000', '2021-05-06 11:38:05');
+(1, 3, 'Sensor 1', 'Humedad', '', '#41ff6f', '2021-05-06 11:38:05'),
+(2, 2, 'Sensor 2', 'Humedad', '12,33,44,23,65,43,32', '#0303c3', '2021-05-11 14:43:59'),
+(6, 4, 'sensor 4', 'Humedad', '32,12,54,54,32,12', '#d0ff25', '2021-05-11 15:00:32'),
+(7, 2, 'sensor 3', 'Humedad', '21,14,53,12,23,43,23,35', '#ffc53c', '2021-05-11 17:53:40'),
+(8, 6, 'sensor 5', 'Humedad', '15,65,32,12,32,12,32', '#f80087', '2021-05-11 17:53:54');
 
 -- --------------------------------------------------------
 
@@ -162,7 +144,7 @@ CREATE TABLE `sensorl` (
 --
 
 INSERT INTO `sensorl` (`idL`, `porcentajeL`, `estadoL`, `descripcionL`) VALUES
-(1, '100', 'LLoviendo', '¡Está lloviendo fuerte!');
+(1, '50', 'Lloviendo', 'La lluvia es moderada');
 
 -- --------------------------------------------------------
 
@@ -185,7 +167,11 @@ CREATE TABLE `sensort` (
 --
 
 INSERT INTO `sensort` (`idSensorT`, `id_planta`, `nombreSensorT`, `tipoSensorT`, `datosSensorT`, `colorSensorT`, `fechaCreacionT`) VALUES
-(1, 4, 'Sensor 1', 'Temperatura', '12,43,12', '#c52121', '2021-05-06 12:00:06');
+(1, 5, 'Sensor 1', 'Temperatura', '', '#ff6e6e', '2021-05-06 12:00:06'),
+(2, 5, 'Sensor 2', 'Temperatura', '32,12,54,32,12,33,23,1', '#ff4242', '2021-05-13 02:20:07'),
+(3, 5, 'Sensor 3', 'Temperatura', '2,32,12,54,22,12,43,23', '#ffe63e', '2021-05-13 02:20:49'),
+(4, 2, 'Sensor 4', 'Temperatura', '23,12,43,12,33,42,16,18', '#39ffad', '2021-05-13 02:21:28'),
+(5, 5, 'Sensor 5', 'Temperatura', '12,43,12,43,23', '#4cffa5', '2021-05-13 02:31:20');
 
 --
 -- Índices para tablas volcadas
@@ -245,7 +231,7 @@ ALTER TABLE `plantas`
 -- AUTO_INCREMENT de la tabla `registrohumedad`
 --
 ALTER TABLE `registrohumedad`
-  MODIFY `idH` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `idH` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT de la tabla `registrotemperatura`
@@ -257,7 +243,7 @@ ALTER TABLE `registrotemperatura`
 -- AUTO_INCREMENT de la tabla `sensorh`
 --
 ALTER TABLE `sensorh`
-  MODIFY `idSensorH` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idSensorH` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `sensorl`
@@ -269,7 +255,7 @@ ALTER TABLE `sensorl`
 -- AUTO_INCREMENT de la tabla `sensort`
 --
 ALTER TABLE `sensort`
-  MODIFY `idSensorT` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idSensorT` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
